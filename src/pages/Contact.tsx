@@ -1,11 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
   Calendar,
   ExternalLink
 } from "lucide-react";
@@ -41,6 +41,7 @@ export const Contact = () => {
               </h2>
             </div>
 
+            {/* Adresse, téléphone, mail, Facebook */}
             <Card className="p-6">
               <CardHeader className="pb-4">
                 <div className="flex items-center gap-3">
@@ -106,7 +107,7 @@ export const Contact = () => {
                   </a>
                 </div>
 
-                {/* Lien Facebook */}
+                {/* Facebook */}
                 <div className="mt-4">
                   <a
                     href="https://www.facebook.com/people/Infirmières-Du-Moulin/61569228755153/"
@@ -121,6 +122,7 @@ export const Contact = () => {
               </CardContent>
             </Card>
 
+            {/* Horaires */}
             <Card className="p-6">
               <CardHeader className="pb-4">
                 <div className="flex items-center gap-3">
@@ -138,7 +140,7 @@ export const Contact = () => {
             </Card>
           </div>
 
-          {/* Appointment and Map */}
+          {/* Rendez-vous + Carte */}
           <div className="space-y-8">
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-8">
@@ -158,7 +160,6 @@ export const Contact = () => {
                 <p className="text-lg mb-6 opacity-90">
                   Prenez rendez-vous rapidement et facilement via notre plateforme Doctolib
                 </p>
-                {/* Bouton cliquable Doctolib */}
                 <a
                   href="https://www.doctolib.fr/cabinet-infirmier/les-sables-d-olonne/cabinet-infirmier-laurie-nowacki-manon-thibaud"
                   target="_blank"
@@ -172,7 +173,7 @@ export const Contact = () => {
               </CardContent>
             </Card>
 
-            {/* Google Maps Placeholder */}
+            {/* Carte */}
             <Card className="p-6">
               <CardHeader>
                 <CardTitle className="text-xl">Notre localisation</CardTitle>
@@ -194,17 +195,65 @@ export const Contact = () => {
                   className="w-full mt-4 flex justify-center items-center gap-2"
                   onClick={() =>
                     window.open(
-                      "https://www.google.com/maps/place/41+b+Av.+Charles+de+Gaulle,+85340+Les+Sables-d'Olonne/@46.5062185,-1.7738952,16z/data=!3m1!4b1!4m6!3m5!1s0x48045d541561452b:0x6b3846765d099ef9!8m2!3d46.5062148!4d-1.7713203!16s%2Fg%2F11nnl0cz8j?entry=ttu",
+                      "https://www.google.com/maps/place/41+b+Av.+Charles+de+Gaulle,+85340+Les+Sables-d'Olonne",
                       "_blank",
                       "noopener,noreferrer"
                     )
                   }
                 >
+                  <ExternalLink className="h-4 w-4" />
                   Ouvrir dans Google Maps
                 </Button>
               </CardContent>
             </Card>
           </div>
+        </div>
+
+        {/* Informations importantes */}
+        <div className="mt-20 max-w-4xl mx-auto">
+          <Card className="p-10 bg-gradient-to-r from-orange-600 to-orange-400 shadow-lg rounded-lg">
+            <CardContent className="text-center text-white">
+              <h3 className="text-3xl font-extrabold mb-8 tracking-wide drop-shadow-lg">
+                Informations importantes
+              </h3>
+              <div className="grid md:grid-cols-2 gap-10 text-left">
+                <div>
+                  <h4 className="flex items-center font-bold text-xl mb-4">
+                    <svg className="w-6 h-6 mr-2 text-yellow-300" fill="none" stroke="currentColor" strokeWidth="2"
+                      viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round"
+                        d="M17 9V7a5 5 0 00-10 0v2M5 13h14v7a2 2 0 01-2 2H7a2 2 0 01-2-2v-7z" />
+                    </svg>
+                    Zone d&apos;intervention
+                  </h4>
+                  <p className="text-yellow-100 leading-relaxed">
+                    Nous intervenons à <strong>Olonne-sur-Mer</strong> et dans les communes environnantes. <br />
+                    Contactez-nous pour vérifier si votre domicile est dans notre zone de couverture.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="flex items-center font-bold text-xl mb-4">
+                    <svg className="w-6 h-6 mr-2 text-yellow-300" fill="none" stroke="currentColor" strokeWidth="2"
+                      viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round"
+                        d="M9 17v-4a3 3 0 016 0v4M12 3v4m-6 6h12" />
+                    </svg>
+                    Prise en charge
+                  </h4>
+                  <p className="text-yellow-100 leading-relaxed">
+                    Tous nos soins sont <strong>remboursés par la Sécurité Sociale</strong> sur prescription médicale. <br />
+                    Nous acceptons le <strong>tiers payant</strong> pour votre confort.
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                className="mt-10 inline-block bg-yellow-400 hover:bg-yellow-500 text-orange-900 font-bold py-3 px-8 rounded-lg shadow-md transition"
+              >
+                Contactez-nous
+              </button>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </div>
