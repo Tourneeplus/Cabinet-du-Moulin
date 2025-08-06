@@ -5,7 +5,7 @@ import componentTagger from 'vite-plugin-component-tagger'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/Cabinet-du-Moulin/', // ✅ Nécessaire pour GitHub Pages
+ 
 
   server: {
     host: '::',       // Permet d'accéder depuis le réseau local

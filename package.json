@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://tourneeplus.github.io/Cabinet-du-Moulin",
+  "homepage": "https://tourneeplus.github.io/Cabinet-du-Moulin/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
