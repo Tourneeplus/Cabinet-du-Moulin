@@ -18,12 +18,13 @@ export const Home = () => {
                 <Heart className="h-12 w-12 text-primary-foreground" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              {t('home.title')}
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-              {t('home.subtitle')}
-            </p>
+           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
+               Cabinet Du Moulin
+          </h1>
+              <p className="text-2xl md:text-2xl text-muted-foreground mb-8">
+              Laurie Nowacki et Marion Thibaud
+              </p>
+
             <p className="text-lg text-foreground mb-8 max-w-2xl mx-auto">
               {t('home.mission')}
             </p>
@@ -120,7 +121,7 @@ export const Home = () => {
                 <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-6 flex items-center justify-center">
                   <Users className="h-12 w-12 text-primary" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-4">Infirmière diplômée d'État</h3>
+                <h3 className="text-2xl font-semibold mb-4">Laurie : <br /> Infirmière diplômée d'État</h3>
                 <p className="text-muted-foreground">
                   Spécialisée dans les soins à domicile avec plus de 10 ans d'expérience 
                   dans l'accompagnement des patients.
@@ -133,7 +134,7 @@ export const Home = () => {
                 <div className="w-24 h-24 bg-secondary/10 rounded-full mx-auto mb-6 flex items-center justify-center">
                   <Heart className="h-12 w-12 text-secondary" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-4">Infirmière diplômée d'État</h3>
+                <h3 className="text-2xl font-semibold mb-4">Manon : <br /> Infirmière diplômée d'État</h3>
                 <p className="text-muted-foreground">
                   Experte en soins post-opératoires et suivis médicaux personnalisés, 
                   formée aux dernières techniques de soins.

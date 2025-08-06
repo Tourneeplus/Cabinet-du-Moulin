@@ -9,7 +9,7 @@ import {
   Calendar,
   ExternalLink
 } from "lucide-react";
-import { FaFacebook } from "react-icons/fa";
+
 
 export const Contact = () => {
   const { t } = useLanguage();
@@ -37,11 +37,11 @@ export const Contact = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-8">
-                Pour toute urgence ou question, n&apos;hésitez pas à nous contacter directement.
+                Pour toute urgence ou question, <br /> n&apos;hésitez pas à nous contacter directement.
               </h2>
             </div>
 
-            {/* Adresse, téléphone, mail, Facebook */}
+            {/* Adresse, téléphone, mail,*/}
             <Card className="p-6">
               <CardHeader className="pb-4">
                 <div className="flex items-center gap-3">
@@ -107,19 +107,7 @@ export const Contact = () => {
                   </a>
                 </div>
 
-                {/* Facebook */}
-                <div className="mt-4">
-                  <a
-                    href="https://www.facebook.com/people/Infirmières-Du-Moulin/61569228755153/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-blue-600 hover:underline gap-2"
-                  >
-                    <FaFacebook className="w-5 h-5" />
-                    Suivez-nous sur Facebook
-                  </a>
-                </div>
-              </CardContent>
+               </CardContent>
             </Card>
 
             {/* Horaires */}
@@ -143,7 +131,7 @@ export const Contact = () => {
           {/* Rendez-vous + Carte */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-8">
+              <h2 className="text-2xl font-bold text-foreground mb-8">
                 Prendre rendez-vous
               </h2>
             </div>
@@ -160,16 +148,19 @@ export const Contact = () => {
                 <p className="text-lg mb-6 opacity-90">
                   Prenez rendez-vous rapidement et facilement via notre plateforme Doctolib
                 </p>
-                <a
-                  href="https://www.doctolib.fr/cabinet-infirmier/les-sables-d-olonne/cabinet-infirmier-laurie-nowacki-manon-thibaud"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 mx-auto px-6 py-3 rounded-md bg-secondary text-primary hover:bg-secondary-dark hover:text-primary-foreground transition-colors"
-                >
-                  <Calendar className="h-5 w-5" />
-                  {t('contact.doctolib')}
-                  <ExternalLink className="h-4 w-4 ml-1" />
-                </a>
+               <Button
+  className="bg-orange-400 hover:bg-blue-700 text-white w-full justify-center gap-2"
+  onClick={() =>
+    window.open(
+      "https://www.doctolib.fr/cabinet-infirmier/les-sables-d-olonne/cabinet-infirmier-laurie-nowacki-manon-thibaud",
+      "_blank",
+      "noopener,noreferrer"
+    )
+  }
+>
+  <Calendar className="h-4 w-4" />
+  Prendre rendez-vous
+</Button>
               </CardContent>
             </Card>
 
@@ -246,12 +237,7 @@ export const Contact = () => {
                   </p>
                 </div>
               </div>
-              <button
-                type="button"
-                className="mt-10 inline-block bg-yellow-400 hover:bg-yellow-500 text-orange-900 font-bold py-3 px-8 rounded-lg shadow-md transition"
-              >
-                Contactez-nous
-              </button>
+              
             </CardContent>
           </Card>
         </div>

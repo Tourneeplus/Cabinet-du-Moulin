@@ -90,7 +90,7 @@ export const Footer = () => {
         {/* Bottom section */}
         <div className="border-t border-background/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm opacity-75">
-            <p>{t("footer.copyright", "© 2025 Cabinet du Moulin")}</p>
+           <p>© 2025 Laurie Nowacki et Marion Thibaud</p>
             <div className="flex gap-6">
               <Link to="/legal" title="Mentions légales" className="hover:opacity-100 transition-opacity">
                 {t("footer.legal", "Mentions légales")}
