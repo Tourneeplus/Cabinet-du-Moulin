@@ -32,22 +32,22 @@ export const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/" className="opacity-75 hover:opacity-100 transition-opacity">
-                  {t('nav.home')}
+                  {t("nav.home", "Accueil")}
                 </Link>
               </li>
               <li>
                 <Link to="/services" className="opacity-75 hover:opacity-100 transition-opacity">
-                  {t('nav.services')}
+                  {t("nav.services", "Services")}
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="opacity-75 hover:opacity-100 transition-opacity">
-                  {t('nav.about')}
+                  {t("nav.about", "À propos")}
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="opacity-75 hover:opacity-100 transition-opacity">
-                  {t('nav.contact')}
+                  {t("nav.contact", "Contact")}
                 </Link>
               </li>
             </ul>
@@ -77,11 +77,11 @@ export const Footer = () => {
 
           {/* Horaires */}
           <div>
-            <h4 className="font-semibold mb-4">{t('contact.hours')}</h4>
+            <h4 className="font-semibold mb-4">{t("contact.hours", "Horaires")}</h4>
             <div className="flex items-start gap-2 text-sm">
               <Clock className="h-4 w-4 mt-0.5 opacity-75" />
               <span className="opacity-75">
-                {t('contact.hours.text')}
+                {t("contact.hours.text", "Tous les jours de 7h à 20h")}
               </span>
             </div>
           </div>
@@ -90,14 +90,15 @@ export const Footer = () => {
         {/* Bottom section */}
         <div className="border-t border-background/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm opacity-75">
-            <p>{t('footer.copyright')}</p>
+            <p>{t("footer.copyright", "© 2025 Cabinet du Moulin")}</p>
             <div className="flex gap-6">
-              <Link to="/legal" className="hover:opacity-100 transition-opacity">
-                {t('footer.legal')}
+              <Link to="/legal" title="Mentions légales" className="hover:opacity-100 transition-opacity">
+                {t("footer.legal", "Mentions légales")}
               </Link>
-              <Link to="/privacy" className="hover:opacity-100 transition-opacity">
-                {t('footer.privacy')}
-              </Link>
+              {/* Décommente cette ligne si la page existe */}
+               <Link to="/privacy" title="Politique de confidentialité" className="hover:opacity-100 transition-opacity">
+                {t("footer.privacy", "Politique de confidentialité")}
+              </Link> 
             </div>
           </div>
         </div>
