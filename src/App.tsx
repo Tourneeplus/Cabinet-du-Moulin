@@ -10,7 +10,7 @@ import { Navigation } from "./components/Navigation";
 import { Footer } from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// Basename dynamique selon l'env (production = sous dossier GitHub Pages)
+// Basename dynamique pour GitHub Pages (ou autre sous-dossier)
 const basename = import.meta.env.PROD ? "/Cabinet-du-Moulin" : "/";
 
 const App = () => {
