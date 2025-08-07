@@ -1,21 +1,26 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
-import path from "path";
-import { componentTagger } from "lovable-tagger";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react-swc'
+import path from 'path'
 
+
+// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/Cabinet-du-Moulin/" : "/", // ✅ ligne ajoutée
+ 
+
   server: {
-    host: "::",
-    port: 8080,
+    host: '::',       // Permet d'accéder depuis le réseau local
+    port: 8080,       // Port personnalisé
   },
+
   plugins: [
-    react(),
-    mode === "development" && componentTagger(),
-  ].filter(Boolean),
+    react(),          // Plugin React avec SWC
+  ],
+
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      '@': path.resolve(__dirname, './src'), // Alias vers src
     },
   },
-}));
+}))
+
+
