@@ -9,14 +9,13 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import { Navigation } from "./components/Navigation";
 import { Footer } from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Routes, Route } from 'react-router-dom'
 
-// IMPORTANT : Basename pour GitHub Pages
+// Basename dynamique selon l'env (production = sous dossier GitHub Pages)
 const basename = import.meta.env.PROD ? "/Cabinet-du-Moulin" : "/";
 
 const App = () => {
   return (
-    <BrowserRouter basename="/Cabinet-du-Moulin">
+    <BrowserRouter basename={basename}>
       <LanguageProvider>
         <div className="min-h-screen flex flex-col">
           <Navigation />
